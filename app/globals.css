@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    transition: background-color 150ms ease, color 150ms ease;
+  }
+
+  h1, h2, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline: 2px solid #0284c7;
+    outline-offset: 2px;
+  }
+}
+
+/* Dark Mode surface, border, typography and control mappings (A4 .print-sheet stays paper-white) */
+html.dark body {
+  background-color: #090e1a;
+  color: #e2e8f0;
+}
+
+html.dark .bg-white:not(.print-sheet):not(.print-sheet *) {
+  background-color: #0f172a;
+}
+
+html.dark .bg-white\/95:not(.print-sheet):not(.print-sheet *) {
+  background-color: rgba(15, 23, 42, 0.95);
+}
+
+html.dark .bg-slate-50:not(.print-sheet):not(.print-sheet *),
+html.dark .bg-slate-50\/70:not(.print-sheet):not(.print-sheet *),
+html.dark .bg-slate-50\/60:not(.print-sheet):not(.print-sheet *),
+html.dark .bg-slate-50\/50:not(.print-sheet):not(.print-sheet *),
+html.dark .bg-slate-50\/40:not(.print-sheet):not(.print-sheet *) {
+  background-color: #162033;
+}
+
+html.dark .bg-slate-100:not(.print-sheet):not(.print-sheet *),
+html.dark .bg-slate-100\/80:not(.print-sheet):not(.print-sheet *) {
+  background-color: #1e293b;
+}
+
+html.dark .bg-slate-200:not(.print-sheet):not(.print-sheet *),
+html.dark .bg-slate-200\/70:not(.print-sheet):not(.print-sheet *) {
+  background-color: #273449;
+}
+
+html.dark .bg-slate-900:not(.print-sheet):not(.print-sheet *) {
+  background-color: #1e293b;
+  border-color: #334155;
+}
+
+html.dark .hover\:bg-slate-50:hover:not(.print-sheet):not(.print-sheet *) {
+  background-color: #1e293b;
+}
+
+html.dark .hover\:bg-slate-100:hover:not(.print-sheet):not(.print-sheet *) {
+  background-color: #273449;
+}
+
+html.dark .hover\:bg-slate-800:hover:not(.print-sheet):not(.print-sheet *) {
+  background-color: #334155;
+}
+
+html.dark .border-slate-100:not(.print-sheet):not(.print-sheet *),
+html.dark .divide-slate-100:not(.print-sheet):not(.print-sheet *) > :not(:last-child) {
+  border-color: #1e293b;
+}
+
+html.dark .border-slate-200:not(.print-sheet):not(.print-sheet *),
+html.dark .divide-slate-200:not(.print-sheet):not(.print-sheet *) > :not(:last-child) {
+  border-color: #273449;
+}
+
+html.dark .border-slate-300:not(.print-sheet):not(.print-sheet *) {
+  border-color: #334155;
+}
+
+html.dark .text-slate-900:not(.print-sheet):not(.print-sheet *) {
+  color: #f8fafc;
+}
+
+html.dark .text-slate-800:not(.print-sheet):not(.print-sheet *) {
+  color: #e2e8f0;
+}
+
+html.dark .text-slate-700:not(.print-sheet):not(.print-sheet *) {
+  color: #cbd5e1;
+}
+
+html.dark .text-slate-600:not(.print-sheet):not(.print-sheet *),
+html.dark .text-slate-500:not(.print-sheet):not(.print-sheet *) {
+  color: #94a3b8;
+}
+
+html.dark .hover\:text-slate-900:hover:not(.print-sheet):not(.print-sheet *) {
+  color: #f8fafc;
+}
+
+html.dark .bg-sky-50:not(.print-sheet):not(.print-sheet *),
+html.dark .bg-sky-50\/70:not(.print-sheet):not(.print-sheet *),
+html.dark .bg-sky-50\/60:not(.print-sheet):not(.print-sheet *),
+html.dark .bg-sky-50\/50:not(.print-sheet):not(.print-sheet *),
+html.dark .bg-sky-50\/40:not(.print-sheet):not(.print-sheet *),
+html.dark .hover\:bg-sky-50:hover:not(.print-sheet):not(.print-sheet *) {
+  background-color: rgba(14, 165, 233, 0.14);
+}
+
+html.dark .bg-sky-100:not(.print-sheet):not(.print-sheet *),
+html.dark .hover\:bg-sky-100:hover:not(.print-sheet):not(.print-sheet *) {
+  background-color: rgba(14, 165, 233, 0.22);
+}
+
+html.dark .border-sky-200:not(.print-sheet):not(.print-sheet *),
+html.dark .border-sky-300:not(.print-sheet):not(.print-sheet *) {
+  border-color: #0369a1;
+}
+
+html.dark .text-sky-600:not(.print-sheet):not(.print-sheet *),
+html.dark .text-sky-700:not(.print-sheet):not(.print-sheet *),
+html.dark .text-sky-800:not(.print-sheet):not(.print-sheet *),
+html.dark .text-sky-900:not(.print-sheet):not(.print-sheet *) {
+  color: #7dd3fc;
+}
+
+html.dark .bg-emerald-50:not(.print-sheet):not(.print-sheet *),
+html.dark .bg-emerald-50\/60:not(.print-sheet):not(.print-sheet *),
+html.dark .bg-emerald-50\/40:not(.print-sheet):not(.print-sheet *),
+html.dark .hover\:bg-emerald-50:hover:not(.print-sheet):not(.print-sheet *) {
+  background-color: rgba(16, 185, 129, 0.14);
+}
+
+html.dark .border-emerald-200:not(.print-sheet):not(.print-sheet *) {
+  border-color: #047857;
+}
+
+html.dark .text-emerald-600:not(.print-sheet):not(.print-sheet *),
+html.dark .text-emerald-700:not(.print-sheet):not(.print-sheet *),
+html.dark .text-emerald-800:not(.print-sheet):not(.print-sheet *),
+html.dark .text-emerald-900:not(.print-sheet):not(.print-sheet *) {
+  color: #6ee7b7;
+}
+
+html.dark .bg-indigo-50:not(.print-sheet):not(.print-sheet *) {
+  background-color: rgba(99, 102, 241, 0.14);
+}
+
+html.dark .border-indigo-200:not(.print-sheet):not(.print-sheet *) {
+  border-color: #4338ca;
+}
+
+html.dark .text-indigo-700:not(.print-sheet):not(.print-sheet *),
+html.dark .text-indigo-800:not(.print-sheet):not(.print-sheet *),
+html.dark .text-indigo-900:not(.print-sheet):not(.print-sheet *) {
+  color: #a5b4fc;
+}
+
+html.dark .bg-amber-50:not(.print-sheet):not(.print-sheet *) {
+  background-color: rgba(245, 158, 11, 0.12);
+}
+
+html.dark .border-amber-200:not(.print-sheet):not(.print-sheet *) {
+  border-color: #b45309;
+}
+
+html.dark .text-amber-700:not(.print-sheet):not(.print-sheet *),
+html.dark .text-amber-800:not(.print-sheet):not(.print-sheet *),
+html.dark .text-amber-900:not(.print-sheet):not(.print-sheet *) {
+  color: #fcd34d;
+}
+
+html.dark .bg-rose-50:not(.print-sheet):not(.print-sheet *),
+html.dark .hover\:bg-rose-50:hover:not(.print-sheet):not(.print-sheet *) {
+  background-color: rgba(244, 63, 94, 0.12);
+}
+
+html.dark .border-rose-200:not(.print-sheet):not(.print-sheet *) {
+  border-color: #be123c;
+}
+
+html.dark .text-rose-600:not(.print-sheet):not(.print-sheet *),
+html.dark .text-rose-700:not(.print-sheet):not(.print-sheet *),
+html.dark .text-rose-800:not(.print-sheet):not(.print-sheet *),
+html.dark .text-rose-900:not(.print-sheet):not(.print-sheet *) {
+  color: #fda4af;
+}
+
+/* Form Controls in Dark Mode */
+html.dark input:not(.print-sheet *),
+html.dark textarea:not(.print-sheet *),
+html.dark select:not(.print-sheet *) {
+  background-color: #0b1324;
+  color: #f1f5f9;
+  border-color: #334155;
+}
+
+html.dark input:not(.print-sheet *)::placeholder,
+html.dark textarea:not(.print-sheet *)::placeholder {
+  color: #64748b;
+}
+
+/* Keep SVG pedagogical diagram canvases bright so dark-ink schematics stay crisp */
+html.dark div:has(> svg:not(.lucide)):not(.print-sheet *),
+html.dark div:has(> div > svg:not(.lucide)):not(.print-sheet *) {
+  background-color: #f8fafc;
+}
+
+/* Keep printable A4 sheet faithfully styled as crisp white paper */
+html.dark .print-sheet {
+  background-color: #ffffff;
+  color: #0f172a;
+  border-color: #334155;
+}
+
+.a4-page-guides {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 1045px,
+    rgba(2, 132, 199, 0.28) 1045px,
+    rgba(2, 132, 199, 0.28) 1047px
+  );
+}
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 14mm 14mm 16mm 14mm;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .print-modal-root {
+    position: static !important;
+    inset: auto !important;
+    display: block !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    overflow: visible !important;
+  }
+
+  .print-modal-scroll {
+    overflow: visible !important;
+    padding: 0 !important;
+  }
+
+  .a4-page-guides {
+    background-image: none !important;
+  }
+
+  .print-sheet {
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  table {
+    page-break-inside: auto;
+  }
+
+  tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+}
